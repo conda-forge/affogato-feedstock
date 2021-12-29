@@ -26,6 +26,7 @@ requirements:
     - boost-cpp
   run:
     - python
+    - vigra
     - {{ pin_compatible('numpy') }}
 
 test:
