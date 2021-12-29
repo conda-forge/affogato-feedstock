@@ -1,4 +1,4 @@
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: affogato
@@ -6,10 +6,10 @@ package:
 
 source:
     url: https://github.com/constantinpape/affogato/archive/{{ version }}.tar.gz
-    sha256: ddf2478dd8b74b32cd8b04757662dfc867b92aae1ae82636625f54daab898727
+    sha256: 62939596b58426a5983a03f0c1be7c91285e6089749d8c50b5ec8d3720ba8e49
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -26,6 +26,7 @@ requirements:
     - boost-cpp
   run:
     - python
+    - vigra
     - {{ pin_compatible('numpy') }}
 
 test:
@@ -34,7 +35,11 @@ test:
   source_files:
     - src/python/test/**/*.py
   commands:
-    - python -m unittest discover -s src/python/test -v
+    - python -m unittest discover -s src/python/test -v  # [linux]
+    # only run the absolutely necessary tests on windows and mac
+    - python src/python/test/segmentation/test_mutex_watershed.py  # [win and osx]
+    - python src/python/test/segmentation/test_interactive_mws_segmentation.py  # [win and osx]
+    - python src/python/test/segmentation/test_grid_graph.py  # [win and osx]
 
 about:
   home: https://github.com/constantinpape/affogato
