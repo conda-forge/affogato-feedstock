@@ -6,7 +6,7 @@ package:
 
 source:
     url: https://github.com/constantinpape/affogato/archive/{{ version }}.tar.gz
-    sha256: a79a57923105b1ab9dbf4179840dad9bdc18282797ff9b8e290ad55c9651d1a7
+    sha256: 62939596b58426a5983a03f0c1be7c91285e6089749d8c50b5ec8d3720ba8e49
 
 build:
   number: 0
