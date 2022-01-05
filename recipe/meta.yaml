@@ -9,7 +9,7 @@ source:
     sha256: 62939596b58426a5983a03f0c1be7c91285e6089749d8c50b5ec8d3720ba8e49
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -17,12 +17,12 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - ninja  # [win]
-    - make
+    - make  # [not win]
   host:
     - python
     - numpy
-    - xtensor >=0.21,<0.22
-    - xtensor-python >=0.24,<0.25
+    - xtensor >=0.24,<0.25
+    - xtensor-python >=0.26,<0.27
     - boost-cpp
   run:
     - python
