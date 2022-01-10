@@ -1,15 +1,15 @@
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
 
 package:
   name: affogato
   version: {{ version }}
 
 source:
-    url: https://github.com/constantinpape/affogato/archive/{{ version }}.tar.gz
-    sha256: 62939596b58426a5983a03f0c1be7c91285e6089749d8c50b5ec8d3720ba8e49
+  url: https://github.com/constantinpape/affogato/archive/{{ version }}.tar.gz
+  sha256: ad3bb1aca50ce9311d4e88e97e701237bce94faa6e79460f0bc2d2061f1484d2
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
