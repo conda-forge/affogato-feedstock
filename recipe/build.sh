@@ -14,7 +14,7 @@ PY_ABI=${PY_VER}${PY_ABIFLAGS}
 ##
 ## Configure
 ##
-cmake .. \
+cmake ${CMAKE_ARGS} .. \
         -DCMAKE_C_COMPILER=${CC} \
         -DCMAKE_CXX_COMPILER=${CXX} \
         -DCMAKE_BUILD_TYPE=RELEASE \
