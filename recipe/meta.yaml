@@ -9,7 +9,7 @@ source:
   sha256: ad3bb1aca50ce9311d4e88e97e701237bce94faa6e79460f0bc2d2061f1484d2
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -26,7 +26,7 @@ requirements:
     - numpy
     - xtensor >=0.24,<0.25
     - xtensor-python >=0.26,<0.27
-    - boost-cpp
+    - libboost-headers
   run:
     - python
     - vigra
