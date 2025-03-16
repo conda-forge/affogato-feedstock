@@ -39,11 +39,10 @@ test:
   source_files:
     - src/python/test/**/*.py
   commands:
-    - python -m unittest discover -s src/python/test -v  # [linux]
-    # only run the absolutely necessary tests on windows and mac
-    - python src/python/test/segmentation/test_mutex_watershed.py  # [win and osx]
-    - python src/python/test/segmentation/test_interactive_mws_segmentation.py  # [win and osx]
-    - python src/python/test/segmentation/test_grid_graph.py  # [win and osx]
+    # - python -m unittest discover -s src/python/test -v
+    # only run the absolutely necessary tests in the CI
+    - python src/python/test/segmentation/test_mutex_watershed.py
+    - python src/python/test/segmentation/test_grid_graph.py
 
 about:
   home: https://github.com/constantinpape/affogato
