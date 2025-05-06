@@ -14,19 +14,7 @@ PY_ABI=${PY_VER}${PY_ABIFLAGS}
 ##
 ## Configure
 ##
-cmake ${CMAKE_ARGS} .. \
-        -DCMAKE_C_COMPILER=${CC} \
-        -DCMAKE_CXX_COMPILER=${CXX} \
-        -DCMAKE_BUILD_TYPE=RELEASE \
-        -DCMAKE_INSTALL_PREFIX=${PREFIX} \
-        -DCMAKE_PREFIX_PATH=${PREFIX} \
-\
-        -DCMAKE_CXX_FLAGS="${CXXFLAGS}" \
-        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS} -O3 -DNDEBUG" \
-        -DCMAKE_CXX_FLAGS_DEBUG="${CXXFLAGS}" \
-\
-        -DPYTHON_EXECUTABLE=${PYTHON} \
-        -DPYTHON_INCLUDE_DIR=${PREFIX}/include/python${PY_ABI} \
+cmake ${CMAKE_ARGS} .. -DPython_EXECUTABLE=${PYTHON}
 
 ##
 ## Compile and install
