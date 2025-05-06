@@ -1,4 +1,4 @@
-{% set version = "0.3.3" %}
+{% set version = "0.4.0" %}
 
 package:
   name: affogato
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/constantinpape/affogato/archive/{{ version }}.tar.gz
-  sha256: ad3bb1aca50ce9311d4e88e97e701237bce94faa6e79460f0bc2d2061f1484d2
+  sha256: ae9553335246c26c8b9eadbe66b5e65e6e290ed0b7b78e7211db003016c00fc4
 
 build:
-  number: 6
+  number: 0
 
 requirements:
   build:
@@ -26,8 +26,8 @@ requirements:
     - python
     - numpy
     - setuptools  # [py>311]
-    - xtensor >=0.25,<0.26
-    - xtensor-python >=0.27,<0.28
+    - xtensor >=0.26,<0.27
+    - xtensor-python >=0.28,<0.29
     - libboost-headers
   run:
     - python
