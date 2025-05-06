@@ -38,6 +38,10 @@ test:
     - affogato
   source_files:
     - src/python/test/**/*.py
+    - data/*.h5
+  requires:
+    - h5py
+    - scipy
   commands:
     # - python -m unittest discover -s src/python/test -v  # [linux]
     # Reduce tests to the essential in conda CI.
