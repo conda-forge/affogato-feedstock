@@ -24,6 +24,7 @@ requirements:
     - make  # [not win]
   host:
     - python
+    - pybind11
     - numpy
     - setuptools  # [py>311]
     - xtensor >=0.26,<0.27
