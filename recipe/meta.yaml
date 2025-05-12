@@ -1,4 +1,4 @@
-{% set version = "0.4.1" %}
+{% set version = "0.4.2" %}
 
 package:
   name: affogato
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/constantinpape/affogato/archive/{{ version }}.tar.gz
-  sha256: 0f991e7a7e6639e42258e8574ad983b01e42fba7e61018f1d04a5dbf280b9cd5
+  sha256: 0b99b80b7b7edb9c61f1f57b47a9e60882abcda6e81c7a973c9d551feb53f122
 
 build:
   number: 0
