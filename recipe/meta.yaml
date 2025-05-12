@@ -1,4 +1,4 @@
-{% set version = "0.4.0" %}
+{% set version = "0.4.2" %}
 
 package:
   name: affogato
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/constantinpape/affogato/archive/{{ version }}.tar.gz
-  sha256: ae9553335246c26c8b9eadbe66b5e65e6e290ed0b7b78e7211db003016c00fc4
+  sha256: 0b99b80b7b7edb9c61f1f57b47a9e60882abcda6e81c7a973c9d551feb53f122
 
 build:
   number: 0
@@ -24,11 +24,12 @@ requirements:
     - make  # [not win]
   host:
     - python
+    - pybind11
     - numpy
     - setuptools  # [py>311]
     - xtensor >=0.26,<0.27
     - xtensor-python >=0.28,<0.29
-    - libboost-headers
+    - libboost-devel
   run:
     - python
     - vigra
@@ -38,6 +39,10 @@ test:
     - affogato
   source_files:
     - src/python/test/**/*.py
+    - data/*.h5
+  requires:
+    - h5py
+    - scipy
   commands:
     # - python -m unittest discover -s src/python/test -v  # [linux]
     # Reduce tests to the essential in conda CI.
